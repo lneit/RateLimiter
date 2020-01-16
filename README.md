@@ -20,7 +20,7 @@ curl -X GET http://localhost:5000
 
 __Environment Variables__
 ```
-QUART_APP=proxy/app:proxy
+QUART_APP=proxy/app:PROXY
 REDIS_HOST=redis://localhost
 REQUEST_HEADER=Remote-Addr
 REQUEST_COUNT=100
