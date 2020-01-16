@@ -19,11 +19,6 @@ COPY store /opt/app/store
 COPY ./.env /opt/app/.env
 
 ENV PYTHONPATH "/opt/app"
-ENV QUART_APP "proxy/app:proxy"
-ENV REDIS_HOST "redis://localhost"
-ENV REQUEST_HEADER "Remote-Addr"
-ENV REQUEST_COUNT "100"
-ENV INTERVAL "3600"
 
 WORKDIR /opt/app
 
