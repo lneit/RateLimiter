@@ -1,7 +1,10 @@
+# RateLimiter
 HTTP Request rate limiting proxy microservice.
 
 __Run rl-proxy Locally__
-Pre-requisite: Run redis as a demon and set the REDIS_HOST environment
+
+**Pre-requisites
+Run redis as a demon and set the REDIS_HOST environment variable
 ```
 pipenv install
 pipenv shell
@@ -37,4 +40,4 @@ __Open API Generation__
 pipenv run openapi
 
 __Deployment Automation__
-Work in progress# RateLimiter
+Work in progress
