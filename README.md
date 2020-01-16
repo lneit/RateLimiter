@@ -1,5 +1,20 @@
 HTTP Request rate limiting proxy microservice.
 
+__Run rl-proxy Locally__
+Pre-requisite: Run redis as a demon and set the REDIS_HOST environment
+```
+pipenv install
+pipenv shell
+source .env
+export $(cut -d= -f1 ../.env)
+quart run
+```
+
+To send a request:
+```
+curl -X GET http://localhost:5000
+```
+
 __Environment Variables__
 ```
 QUART_APP=proxy/app:proxy
@@ -10,7 +25,7 @@ INTERVAL=3600
 ```
 
 __Dependencies__
-Redis has to be run locally for testapp command
+Redis has to be run locally for testapp command or the local run
 
 __Integration Test__
 pipenv run testapp
