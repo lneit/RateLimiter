@@ -29,21 +29,5 @@ class RateLimitProxyRoot(Resource):
         return "Hello!"
 
 
-
-# @PROXY.route("/")
-# @rate_limit(int(REQUEST_COUNT), int(INTERVAL))
-# async def root():
-#     """Root endpoint. Used to keep the track of the incoming requests' rate.
-#     """
-#     return redirect(url_for("index"))
-
-
-# @PROXY.route("/index")
-# async def index():
-#     """An endpoint to redirect the valid requests to.
-#     """
-#     return "index page"
-
-
 if __name__ == "__main__":
     PROXY.run(port=7070)
