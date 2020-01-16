@@ -1,0 +1,9 @@
+version: "3.7"
+services:
+  rlproxy:
+    image: localhost:5000/rlproxy:latest
+    ports:
+      - "7070:7070"
+    restart: always
+    container_name: rlproxy
+    env_file: ./.env

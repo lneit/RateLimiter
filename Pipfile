@@ -1,0 +1,22 @@
+[[source]]
+name = "pypi"
+url = "https://pypi.org/simple"
+verify_ssl = true
+
+[dev-packages]
+
+[packages]
+quart = "*"
+aioredis = "*"
+pytest = "*"
+asynctest = "*"
+pytest-asyncio = "*"
+quart-openapi = "*"
+
+[requires]
+python_version = "3.7"
+
+[scripts]
+unittest = "pytest ./tests/test_rate_limit.py ./tests/test_redis_store.py -s"
+testapp = "pytest ./tests/test_app.py -s"
+openapi = "pytest ./tests/test_open_api.py -s"
