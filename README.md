@@ -18,6 +18,12 @@ To send a request:
 curl -X GET http://localhost:5000
 ```
 
+__Run rlproxy as a Microservice__
+```
+docker-compose build
+docker-compose up -d
+```
+
 __Environment Variables__
 ```
 QUART_APP=proxy/app:PROXY
