@@ -21,7 +21,7 @@ quart run
 
 To send a request:
 ```
-curl -X GET http://localhost:5000
+curl -X GET http://localhost:7070
 ```
 
 __Environment Variables__
