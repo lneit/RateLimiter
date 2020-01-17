@@ -1,6 +1,12 @@
 # RateLimiter
 HTTP Request rate limiting proxy microservice.
 
+__Run rlproxy as a Microservice__
+```
+docker-compose build
+docker-compose up -d
+```
+
 __Run rl-proxy Locally__
 
 **Pre-requisites
@@ -16,12 +22,6 @@ quart run
 To send a request:
 ```
 curl -X GET http://localhost:5000
-```
-
-__Run rlproxy as a Microservice__
-```
-docker-compose build
-docker-compose up -d
 ```
 
 __Environment Variables__
