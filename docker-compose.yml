@@ -9,3 +9,13 @@ services:
       - "7070:7070"
     restart: always
     container_name: rlproxy
+    depends_on:
+      - redis
+    env_file:
+      - .env
+  redis:
+    image: 'bitnami/redis:5.0'
+    environment:
+      # ALLOW_EMPTY_PASSWORD is recommended only for development.
+      - ALLOW_EMPTY_PASSWORD=yes
+      - REDIS_DISABLE_COMMANDS=FLUSHDB,FLUSHALL
