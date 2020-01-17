@@ -16,17 +16,11 @@ RUN pip3 install -r /tmp/requirements.txt \
 COPY decorators /opt/app/decorators
 COPY proxy /opt/app/proxy
 COPY store /opt/app/store
-COPY ./.env /opt/app/.env
 
 ENV PYTHONPATH "/opt/app"
-ENV QUART_APP "proxy/app:proxy"
-ENV REDIS_HOST "redis://localhost"
-ENV REQUEST_HEADER "Remote-Addr"
-ENV REQUEST_COUNT "100"
-ENV INTERVAL "3600"
 
 WORKDIR /opt/app
 
 EXPOSE 7070
 
-CMD ["hypercorn", "-b", "0.0.0.0:7070", "-w", "10", "proxy/app:PROXY"]
+CMD ["hypercorn", "-b", "0.0.0.0:7070", "-w", "1", "proxy/app:PROXY"]
